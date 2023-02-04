@@ -8,6 +8,11 @@ public class Push : MonoBehaviour
     float halfColliderWidth;
     float halfColliderHight;
     float microdist=0.01f;
+
+    Vector3 Pos;
+    Vector3 direc;
+    bool isMoving=false;
+    
       void Start()
     {
         //Get size of collider
@@ -16,16 +21,25 @@ public class Push : MonoBehaviour
         halfColliderHight = GetComponent<BoxCollider>().size.y / 2;
 
     }
+    void FixedUpdate(){
+         if(isMoving){
+                block.MovePosition( Vector3.MoveTowards(block.position,direc,0.2f));
+                if(block.position==direc){
+                    isMoving=false;
+                }
+                
+            }
+    }
     public bool PushTo(float d,Vector3 v){
         bool moved=false;
-        //Snap vector to cardinal direction
+
         Vector3 direction=v;
 
 
         //Test for collision in next movement
         Collider[] colobj=Physics.OverlapBox(
-          block.position+d*direction, (transform.localScale/2)-
-          new Vector3(microdist,microdist,microdist)
+            block.position+d*direction, (transform.localScale/2)-
+            new Vector3(microdist,microdist,microdist)
         );
         if(colobj.Length == 1){
             bool succes=false;
@@ -34,12 +48,14 @@ public class Push : MonoBehaviour
                 succes=pushblock.PushTo(d,direction);
             }
             if (succes==true){
-                block.MovePosition(block.position +(d*direction));
+                direc=block.position +(d*direction);
+                isMoving=true;
                 moved=true;
             }
             
         }else if(colobj.Length == 0){
-            block.MovePosition(block.position +(d*direction));
+            direc=block.position +(d*direction);
+            isMoving=true;
             moved=true;
         }
         return moved;

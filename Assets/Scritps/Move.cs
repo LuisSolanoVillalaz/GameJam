@@ -14,11 +14,13 @@ public class Move : MonoBehaviour
     
     //Variables to store input
     Vector3 Pos;
+    Vector3 direc;
     
     //variable for conditional
     bool enable=false;
     public float traveldistance=8f;
     float timer=0;
+    bool isMoving=false;
 
     //Tolerance for collider detection
     float microdist=0.01f;
@@ -38,12 +40,20 @@ public class Move : MonoBehaviour
         //If enable run move function
             Pos.x=Input.GetAxisRaw("Horizontal");
             Pos.z=Input.GetAxisRaw("Vertical");
-            if(timer>=0.2 && (Pos.x!=0 ||Pos.z!=0)){
+            if(timer>=0.2 && (Pos.x!=0 ||Pos.z!=0) && !isMoving){
+                direc=block.position+traveldistance*Pos;
                 MoveTo(Pos);
                 timer=0;
             }
             if(timer<=0.2){
                 timer=timer+Time.deltaTime;
+            }
+            if(isMoving){
+                block.MovePosition( Vector3.MoveTowards(block.position,direc,0.2f));
+                if(block.position==direc){
+                    isMoving=false;
+                }
+                
             }
 
     }
@@ -52,8 +62,8 @@ public class Move : MonoBehaviour
     public void MoveTo(Vector3 v){
         Vector3 direction=v;
         Collider[] colobj=Physics.OverlapBox(
-          block.position+traveldistance*direction, (transform.localScale/2)-
-          new Vector3(microdist,microdist,microdist)
+            block.position+traveldistance*direction, (transform.localScale/2)-
+            new Vector3(microdist,microdist,microdist)
         );
         if(colobj.Length == 1){
             bool succes=false;
@@ -62,11 +72,11 @@ public class Move : MonoBehaviour
                 succes=pushblock.PushTo(traveldistance,direction);
             }
             if(succes==true){
-                block.MovePosition(block.position +(traveldistance*direction));
+                isMoving=true;
             }
             
         }else if(colobj.Length == 0){
-            block.MovePosition(block.position +(traveldistance*direction));
+            isMoving=true;
         }
 
     }
