@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class Snaper : MonoBehaviour
+ class Snaper : MonoBehaviour
 {   //Visible in editor
     public bool CanPush=true;//can push blocks
     public bool CanBePush=true;//can be push by other block
