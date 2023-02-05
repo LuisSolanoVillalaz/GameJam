@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player2D : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class Player2D : MonoBehaviour
     public GameObject menu;
     Rigidbody pullBox;
     UnityEngine.Vector3 boxPos;
+
+
+    float stepPeriod = 0.33f;
+    float stepTime = 0.0f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -62,8 +68,22 @@ public class Player2D : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
-        if(Physics.OverlapBox(rb.position+underbox, width).Length>1){
+        // Pasitos
+        stepTime += Time.deltaTime;
+
+        var pasitos = GetComponent<FMODUnity.StudioEventEmitter>();
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            pasitos.SetParameter("floor", 1);
+            Debug.Log("HIERBA");
+        }
+        else
+        {
+            pasitos.SetParameter("floor", 0);
+            Debug.Log("SUELO");
+        }
+
+        if (Physics.OverlapBox(rb.position+underbox, width).Length>1){
             isfloating=false;
             anim.SetBool("Jumping", false);
             rb.velocity= UnityEngine.Vector3.zero;
@@ -89,6 +109,12 @@ public class Player2D : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
                 rb.velocity = new UnityEngine.Vector3(-Input.GetAxisRaw("Horizontal") * 5, rb.velocity.y, (-Input.GetAxisRaw("Vertical") * 5));
+                if (stepTime > stepPeriod)
+                {
+                    pasitos.Play();
+                    stepTime = 0.0f;
+                }
+                
             }
 
         }
@@ -100,6 +126,11 @@ public class Player2D : MonoBehaviour
             {
 
                 rb.velocity = new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5,rb.velocity.y, 0 );
+                if (stepTime > stepPeriod && !isfloating)
+                {
+                    pasitos.Play();
+                    stepTime = 0.0f;
+                }
                 
             }
             if (!isfloating && Input.GetAxisRaw("Jump") != 0 && pullBox == null)
