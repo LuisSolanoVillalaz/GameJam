@@ -13,7 +13,7 @@ public class NextLevel : MonoBehaviour
         if (other.tag == "Player")
         {
 
-            if (SceneManager.GetActiveScene().buildIndex == 0)
+            if (SceneManager.GetActiveScene().buildIndex == 1)
             {
                 DontDestroyOnLoad(music);
 
