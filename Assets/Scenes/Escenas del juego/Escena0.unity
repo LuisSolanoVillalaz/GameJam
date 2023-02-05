@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d4c5ca40b175443b883f767848bb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  music: {fileID: 1349891155}
 --- !u!114 &89434094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,9 +950,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f0924e145975241a5df33635edc368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isfloating: 0
+  rotationSpeed: 10
+  playerVisuals: {fileID: 0}
   tplat: 0
   tplit: 0
-  rb: {fileID: 0}
+  canpause: 1
+  rb: {fileID: 705570665}
   menu: {fileID: 0}
 --- !u!54 &705570665
 Rigidbody:
@@ -1082,6 +1087,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 952c71df92d1803478bc56ac36de7181, type: 3}
   m_PrefabInstance: {fileID: 1100195425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1349891155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349891158}
+  - component: {fileID: 1349891157}
+  - component: {fileID: 1349891156}
+  m_Layer: 0
+  m_Name: music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1349891156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349891155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9b7a95500d95643bd0da0f8b2966ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1349891157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349891155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1290456261
+      Data2: 1339449072
+      Data3: -260318038
+      Data4: 1620066825
+    Path: event:/Music/bunny_Theme
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: isIntro
+    Value: 1
+  - Name: location
+    Value: 0
+  - Name: is3DFlag
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1349891158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349891155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2809014, y: 3.839182, z: 7.326704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640195501
 GameObject:
   m_ObjectHideFlags: 0
