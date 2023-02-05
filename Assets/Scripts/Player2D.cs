@@ -64,9 +64,11 @@ public class Player2D : MonoBehaviour
         
         if(Physics.OverlapBox(rb.position+underbox, width).Length>1){
             isfloating=false;
+            anim.SetBool("Jumping", false);
             rb.velocity= UnityEngine.Vector3.zero;
         }else{
-            isfloating=true;
+            anim.SetBool("Jumping", true);
+            isfloating =true;
             
         }
         
