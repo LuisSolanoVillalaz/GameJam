@@ -23,13 +23,15 @@ public class Menu : MonoBehaviour
             opt = false;
             options.SetActive(false);
             menu.SetActive(true);
-            
+            credito.SetActive(false);
+
         }
         else
         {
             opt= true;
             options.SetActive(true);
             menu.SetActive(false);
+            credito.SetActive(false);
         }
         
     }
