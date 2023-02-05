@@ -69,6 +69,7 @@ public class movCam : MonoBehaviour
 
                     }
                 }
+                padre.GetComponent<Player2D>().canpause = true;
                 canmove = false;
                 cen = false;
                 Invoke("cant", 1.5f);
@@ -101,6 +102,7 @@ public class movCam : MonoBehaviour
                         }
                     }
                 }
+                padre.GetComponent<Player2D>().canpause = true;
                 canmove = false;
                 cen = true; 
 

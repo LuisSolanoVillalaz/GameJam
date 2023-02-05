@@ -8,7 +8,7 @@ public class Player2D : MonoBehaviour
     bool isfloating = false;
     public bool tplat = false;
     public bool tplit = false;
-    bool canpause=true;
+    public bool canpause=true;
     public Rigidbody rb;
     movCam cam;
     bool changing;
@@ -33,7 +33,15 @@ public class Player2D : MonoBehaviour
         {
             canpause = false;
             menu.GetComponent<Pause>().pausar();
-            Invoke("unpause", 1f);
+            float timeRemaining = 1;
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                canpause = true;
+            }
         }
         
     }

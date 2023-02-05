@@ -23,9 +23,10 @@ public class Pause : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;
+            paused = true;
+            //Time.timeScale = 0;
             pause.SetActive(true);
-            paused= true;
+           
         }
     
     }
