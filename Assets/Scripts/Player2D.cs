@@ -8,18 +8,14 @@ public class Player2D : MonoBehaviour
     public bool isfloating = false;
     UnityEngine.Vector3 underbox;
     UnityEngine.Vector3 width;
-
     [SerializeField] float rotationSpeed = 10f;
     [SerializeField] GameObject playerVisuals;
     Animator anim;
-    bool isfloating = false;
-    UnityEngine.Vector3 underbox;
-    UnityEngine.Vector3 width;
     public bool tplat = false;
     public bool tplit = false;
 
     public bool canpause=true;
-    public bool canpause=true;
+
     public Rigidbody rb;
 
     movCam cam;
@@ -98,11 +94,8 @@ public class Player2D : MonoBehaviour
 
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
-<<<<<<< .mine
+
                 rb.velocity = new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5,rb.velocity.y, 0 );
-=======
-                rb.velocity = new UnityEngine.Vector3(-Input.GetAxisRaw("Horizontal") * 5, rb.velocity.y, 0);
->>>>>>> .theirs
             }
         }
 
@@ -122,6 +115,7 @@ public class Player2D : MonoBehaviour
         {
             rb.velocity = new UnityEngine.Vector3(rb.velocity.x, 5, rb.velocity.z);
         } 
+
     }
     public void RotateToMovement()
     {

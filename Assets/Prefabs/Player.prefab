@@ -113,9 +113,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f0924e145975241a5df33635edc368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isfloating: 0
+  rotationSpeed: 100000
+  playerVisuals: {fileID: 1687454611979357506}
   tplat: 0
   tplit: 0
-  rb: {fileID: 0}
+  canpause: 1
+  rb: {fileID: 5789860527607111934}
   menu: {fileID: 0}
 --- !u!54 &5789860527607111934
 Rigidbody:
