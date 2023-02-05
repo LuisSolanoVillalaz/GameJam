@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
     public GameObject credito;
     public GameObject menu;
     bool opt = false;
-    bool cre = false;
+    public bool cre = false;
     public void jugar()
     {
         SceneManager.LoadScene(1);
@@ -20,9 +20,10 @@ public class Menu : MonoBehaviour
     {
         if(opt)
         {
+            opt = false;
             options.SetActive(false);
             menu.SetActive(true);
-            opt = false;
+            
         }
         else
         {
@@ -37,10 +38,11 @@ public class Menu : MonoBehaviour
     {
         if (cre)
         {
+            cre = false;
             options.SetActive(false);
             menu.SetActive(true);
             credito.SetActive(false);
-            cre = false;
+            
         }
         else
         {
