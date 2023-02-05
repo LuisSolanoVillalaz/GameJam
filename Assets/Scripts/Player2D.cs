@@ -38,7 +38,7 @@ public class Player2D : MonoBehaviour
 
         underbox=  new UnityEngine.Vector3 (0f,-0.25f,0f);
 
-        width= new UnityEngine.Vector3(0.1f,0.02f,0.1f);
+        width= new UnityEngine.Vector3(0.1f,0.2f,0.1f);
 
     }
     private void Update()
@@ -137,6 +137,7 @@ public class Player2D : MonoBehaviour
             {
                 rb.velocity = new UnityEngine.Vector3(rb.velocity.x, 6, rb.velocity.z);
             }
+            
         }
 
         if (Input.GetAxisRaw("Hold") == 0 && pullBox != null) {
@@ -151,10 +152,7 @@ public class Player2D : MonoBehaviour
         }
         RotateToMovement();
         anim.SetFloat("WalkBlend", rb.velocity.magnitude);
-        if (!isfloating && Input.GetAxisRaw("Jump") != 0 && pullBox == null)
-        {
-            rb.velocity = new UnityEngine.Vector3(rb.velocity.x, 5, rb.velocity.z);
-        } 
+      
 
     }
     public void RotateToMovement()

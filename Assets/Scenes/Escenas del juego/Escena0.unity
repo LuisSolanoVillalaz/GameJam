@@ -893,6 +893,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 477163050815498329, guid: 7304f379c58b3eb4b8d1241be9edb5cf, type: 3}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477163050815498329, guid: 7304f379c58b3eb4b8d1241be9edb5cf, type: 3}
+      propertyPath: Params.Array.data[0].Name
+      value: floor
+      objectReference: {fileID: 0}
     - target: {fileID: 5789860527607111920, guid: 7304f379c58b3eb4b8d1241be9edb5cf, type: 3}
       propertyPath: m_RootOrder
       value: 5
