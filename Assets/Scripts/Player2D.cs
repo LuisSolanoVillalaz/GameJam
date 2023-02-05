@@ -53,7 +53,7 @@ public class Player2D : MonoBehaviour
         {
             if (Input.GetAxis("Horizontal") != 0|| Input.GetAxis("Vertical") != 0)
             {
-                rb.velocity=new UnityEngine.Vector3 (-Input.GetAxis("Vertical")*5,rb.velocity.y, Input.GetAxisRaw("Horizontal") * 5);
+                rb.velocity=new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5, rb.velocity.y,(-Input.GetAxis("Vertical")*5));
             }
             
         }
@@ -62,7 +62,7 @@ public class Player2D : MonoBehaviour
 
             if (Input.GetAxis("Horizontal") != 0)
             {
-                rb.velocity = new UnityEngine.Vector3 (0, 0, Input.GetAxisRaw("Horizontal") * 5);
+                rb.velocity = new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5,0, 0 );
             }
         }
        
