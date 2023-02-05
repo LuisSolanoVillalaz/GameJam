@@ -1,283 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9102957530372047160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97ba6cc2660c0ca498540d254701057a, type: 3}
-  m_Name: FMODStudioSettingsPlatform
-  m_EditorClassIdentifier: 
-  identifier: 2fea114e74ecf3c4f920e1d5cc1c4c40
-  parentIdentifier: default
-  active: 0
-  Properties:
-    LiveUpdate:
-      Value: 0
-      HasValue: 0
-    LiveUpdatePort:
-      Value: 0
-      HasValue: 0
-    Overlay:
-      Value: 0
-      HasValue: 0
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 0
-      HasValue: 0
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 0
-      HasValue: 0
-    RealChannelCount:
-      Value: 0
-      HasValue: 0
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 0
-    StaticPlugins:
-      Value: []
-      HasValue: 0
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
-  threadAffinities:
-    Value: []
-    HasValue: 0
-  displaySortOrder: 0
-  childIdentifiers: []
-  codecChannels:
-    Value: []
-    HasValue: 0
---- !u!114 &-7380702405987821464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73549a74f689f0849a8271d9e908c514, type: 3}
-  m_Name: FMODStudioSettingsPlatform
-  m_EditorClassIdentifier: 
-  identifier: b7716510a1f36934c87976f3a81dbf3d
-  parentIdentifier: default
-  active: 0
-  Properties:
-    LiveUpdate:
-      Value: 0
-      HasValue: 0
-    LiveUpdatePort:
-      Value: 0
-      HasValue: 0
-    Overlay:
-      Value: 0
-      HasValue: 0
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 0
-      HasValue: 0
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 0
-      HasValue: 0
-    RealChannelCount:
-      Value: 0
-      HasValue: 0
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 0
-    StaticPlugins:
-      Value: []
-      HasValue: 0
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
-  threadAffinities:
-    Value: []
-    HasValue: 0
-  displaySortOrder: 0
-  childIdentifiers: []
-  codecChannels:
-    Value: []
-    HasValue: 0
---- !u!114 &-5293840094813265142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9587379c972e4a54da1949613f11e1c6, type: 3}
-  m_Name: FMODStudioSettingsPlatform
-  m_EditorClassIdentifier: 
-  identifier: default
-  parentIdentifier: 
-  active: 1
-  Properties:
-    LiveUpdate:
-      Value: 0
-      HasValue: 0
-    LiveUpdatePort:
-      Value: 9264
-      HasValue: 1
-    Overlay:
-      Value: 0
-      HasValue: 0
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 0
-      HasValue: 0
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 0
-      HasValue: 0
-    RealChannelCount:
-      Value: 0
-      HasValue: 0
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 1
-    StaticPlugins:
-      Value: []
-      HasValue: 1
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
-  threadAffinities:
-    Value: []
-    HasValue: 0
-  displaySortOrder: 0
-  childIdentifiers:
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - 46fbfdf3fc43db0458918377fd40293e
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - 52eb9df5db46521439908db3a29a1bbb
-  - b7716510a1f36934c87976f3a81dbf3d
-  - fd7c55dab0fce234b8c25f6ffca523c1
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - e7a046c753c3c3d4aacc91f6597f310d
-  codecChannels:
-    Value: []
-    HasValue: 0
---- !u!114 &-4107144762413984221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17eea195bdfbf014e91ba7620ee491f8, type: 3}
-  m_Name: FMODStudioSettingsPlatform
-  m_EditorClassIdentifier: 
-  identifier: e7a046c753c3c3d4aacc91f6597f310d
-  parentIdentifier: default
-  active: 0
-  Properties:
-    LiveUpdate:
-      Value: 0
-      HasValue: 0
-    LiveUpdatePort:
-      Value: 0
-      HasValue: 0
-    Overlay:
-      Value: 0
-      HasValue: 0
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 0
-      HasValue: 0
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 0
-      HasValue: 0
-    RealChannelCount:
-      Value: 0
-      HasValue: 0
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 0
-    StaticPlugins:
-      Value: []
-      HasValue: 0
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
-  threadAffinities:
-    Value: []
-    HasValue: 0
-  displaySortOrder: 0
-  childIdentifiers: []
-  codecChannels:
-    Value: []
-    HasValue: 0
---- !u!114 &-3428887578179959183
+--- !u!114 &-8805592987202360368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344,7 +67,74 @@ MonoBehaviour:
   codecChannels:
     Value: []
     HasValue: 0
---- !u!114 &-1177703099996374009
+--- !u!114 &-7767074225699885719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335f0a4b26fb46942858ea029e030d2a, type: 3}
+  m_Name: FMODStudioSettingsPlatform
+  m_EditorClassIdentifier: 
+  identifier: playInEditor
+  parentIdentifier: 
+  active: 1
+  Properties:
+    LiveUpdate:
+      Value: 1
+      HasValue: 1
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
+    Overlay:
+      Value: 1
+      HasValue: 1
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 48000
+      HasValue: 1
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 1024
+      HasValue: 1
+    RealChannelCount:
+      Value: 256
+      HasValue: 1
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 0
+    StaticPlugins:
+      Value: []
+      HasValue: 0
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  OutputTypeName: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+  displaySortOrder: 0
+  childIdentifiers: []
+  codecChannels:
+    Value: []
+    HasValue: 0
+--- !u!114 &-7367718702049205084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,6 +147,207 @@ MonoBehaviour:
   m_Name: FMODStudioSettingsPlatform
   m_EditorClassIdentifier: 
   identifier: 52eb9df5db46521439908db3a29a1bbb
+  parentIdentifier: default
+  active: 0
+  Properties:
+    LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
+    Overlay:
+      Value: 0
+      HasValue: 0
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 0
+      HasValue: 0
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 0
+      HasValue: 0
+    RealChannelCount:
+      Value: 0
+      HasValue: 0
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 0
+    StaticPlugins:
+      Value: []
+      HasValue: 0
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  OutputTypeName: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+  displaySortOrder: 0
+  childIdentifiers: []
+  codecChannels:
+    Value: []
+    HasValue: 0
+--- !u!114 &-6575315245687968318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9660e62d6232af242877f0cc2b90c63d, type: 3}
+  m_Name: FMODStudioSettingsPlatform
+  m_EditorClassIdentifier: 
+  identifier: 2c5177b11d81d824dbb064f9ac8527da
+  parentIdentifier: default
+  active: 0
+  Properties:
+    LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
+    Overlay:
+      Value: 0
+      HasValue: 0
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 0
+      HasValue: 0
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 0
+      HasValue: 0
+    RealChannelCount:
+      Value: 0
+      HasValue: 0
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 0
+    StaticPlugins:
+      Value: []
+      HasValue: 0
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  OutputTypeName: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+  displaySortOrder: 0
+  childIdentifiers: []
+  codecChannels:
+    Value: []
+    HasValue: 0
+--- !u!114 &-5840639781016162455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ba6cc2660c0ca498540d254701057a, type: 3}
+  m_Name: FMODStudioSettingsPlatform
+  m_EditorClassIdentifier: 
+  identifier: 2fea114e74ecf3c4f920e1d5cc1c4c40
+  parentIdentifier: default
+  active: 0
+  Properties:
+    LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
+    Overlay:
+      Value: 0
+      HasValue: 0
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 0
+      HasValue: 0
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 0
+      HasValue: 0
+    RealChannelCount:
+      Value: 0
+      HasValue: 0
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 0
+    StaticPlugins:
+      Value: []
+      HasValue: 0
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  OutputTypeName: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+  displaySortOrder: 0
+  childIdentifiers: []
+  codecChannels:
+    Value: []
+    HasValue: 0
+--- !u!114 &-4738665414014132428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b87314b32fbe18943af496e4b47136c6, type: 3}
+  m_Name: FMODStudioSettingsPlatform
+  m_EditorClassIdentifier: 
+  identifier: 46fbfdf3fc43db0458918377fd40293e
   parentIdentifier: default
   active: 0
   Properties:
@@ -464,19 +455,19 @@ MonoBehaviour:
   HideSetupWizard: 0
   LastEventReferenceScanVersion: 131601
   Platforms:
-  - {fileID: 4390281415918643250}
-  - {fileID: 6771695642808118082}
-  - {fileID: -3428887578179959183}
-  - {fileID: -1177703099996374009}
-  - {fileID: -7380702405987821464}
-  - {fileID: 8673443426103166901}
-  - {fileID: 4637492415973449107}
-  - {fileID: -9102957530372047160}
-  - {fileID: -4107144762413984221}
-  - {fileID: -5293840094813265142}
-  - {fileID: 6724377094412791690}
-  MigratedPlatforms: 08000000150000000b000000090000000a00000005000000060000000c000000120000000200000001000000
---- !u!114 &4390281415918643250
+  - {fileID: -7767074225699885719}
+  - {fileID: 1153466316238852263}
+  - {fileID: -5840639781016162455}
+  - {fileID: 3482722081923016530}
+  - {fileID: -6575315245687968318}
+  - {fileID: -7367718702049205084}
+  - {fileID: 6070490598565505747}
+  - {fileID: 2379503991431755247}
+  - {fileID: -4738665414014132428}
+  - {fileID: 8165213984171205770}
+  - {fileID: -8805592987202360368}
+  MigratedPlatforms: 0b0000000a0000001500000005000000060000000900000008000000120000000c0000000200000001000000
+--- !u!114 &1153466316238852263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,10 +476,86 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9660e62d6232af242877f0cc2b90c63d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9587379c972e4a54da1949613f11e1c6, type: 3}
   m_Name: FMODStudioSettingsPlatform
   m_EditorClassIdentifier: 
-  identifier: 2c5177b11d81d824dbb064f9ac8527da
+  identifier: default
+  parentIdentifier: 
+  active: 1
+  Properties:
+    LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
+      Value: 9264
+      HasValue: 1
+    Overlay:
+      Value: 0
+      HasValue: 0
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 0
+      HasValue: 0
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 0
+      HasValue: 0
+    RealChannelCount:
+      Value: 0
+      HasValue: 0
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 1
+    StaticPlugins:
+      Value: []
+      HasValue: 1
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  OutputTypeName: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+  displaySortOrder: 0
+  childIdentifiers:
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - 52eb9df5db46521439908db3a29a1bbb
+  - c88d16e5272a4e241b0ef0ac2e53b73d
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - 46fbfdf3fc43db0458918377fd40293e
+  - b7716510a1f36934c87976f3a81dbf3d
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  codecChannels:
+    Value: []
+    HasValue: 0
+--- !u!114 &2379503991431755247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a382382f106584e8f8f62412fee177, type: 3}
+  m_Name: FMODStudioSettingsPlatform
+  m_EditorClassIdentifier: 
+  identifier: fd7c55dab0fce234b8c25f6ffca523c1
   parentIdentifier: default
   active: 0
   Properties:
@@ -543,7 +610,74 @@ MonoBehaviour:
   codecChannels:
     Value: []
     HasValue: 0
---- !u!114 &4637492415973449107
+--- !u!114 &3482722081923016530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17eea195bdfbf014e91ba7620ee491f8, type: 3}
+  m_Name: FMODStudioSettingsPlatform
+  m_EditorClassIdentifier: 
+  identifier: e7a046c753c3c3d4aacc91f6597f310d
+  parentIdentifier: default
+  active: 0
+  Properties:
+    LiveUpdate:
+      Value: 0
+      HasValue: 0
+    LiveUpdatePort:
+      Value: 0
+      HasValue: 0
+    Overlay:
+      Value: 0
+      HasValue: 0
+    Logging:
+      Value: 0
+      HasValue: 0
+    SampleRate:
+      Value: 0
+      HasValue: 0
+    BuildDirectory:
+      Value: 
+      HasValue: 0
+    SpeakerMode:
+      Value: 0
+      HasValue: 0
+    VirtualChannelCount:
+      Value: 0
+      HasValue: 0
+    RealChannelCount:
+      Value: 0
+      HasValue: 0
+    DSPBufferLength:
+      Value: 0
+      HasValue: 0
+    DSPBufferCount:
+      Value: 0
+      HasValue: 0
+    Plugins:
+      Value: []
+      HasValue: 0
+    StaticPlugins:
+      Value: []
+      HasValue: 0
+    CallbackHandler:
+      Value: {fileID: 0}
+      HasValue: 0
+  OutputTypeName: 
+  threadAffinities:
+    Value: []
+    HasValue: 0
+  displaySortOrder: 0
+  childIdentifiers: []
+  codecChannels:
+    Value: []
+    HasValue: 0
+--- !u!114 &6070490598565505747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -610,7 +744,7 @@ MonoBehaviour:
   codecChannels:
     Value: []
     HasValue: 0
---- !u!114 &6724377094412791690
+--- !u!114 &8165213984171205770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -619,144 +753,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 335f0a4b26fb46942858ea029e030d2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 73549a74f689f0849a8271d9e908c514, type: 3}
   m_Name: FMODStudioSettingsPlatform
   m_EditorClassIdentifier: 
-  identifier: playInEditor
-  parentIdentifier: 
-  active: 1
-  Properties:
-    LiveUpdate:
-      Value: 1
-      HasValue: 1
-    LiveUpdatePort:
-      Value: 0
-      HasValue: 0
-    Overlay:
-      Value: 1
-      HasValue: 1
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 48000
-      HasValue: 1
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 1024
-      HasValue: 1
-    RealChannelCount:
-      Value: 256
-      HasValue: 1
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 0
-    StaticPlugins:
-      Value: []
-      HasValue: 0
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
-  threadAffinities:
-    Value: []
-    HasValue: 0
-  displaySortOrder: 0
-  childIdentifiers: []
-  codecChannels:
-    Value: []
-    HasValue: 0
---- !u!114 &6771695642808118082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87314b32fbe18943af496e4b47136c6, type: 3}
-  m_Name: FMODStudioSettingsPlatform
-  m_EditorClassIdentifier: 
-  identifier: 46fbfdf3fc43db0458918377fd40293e
-  parentIdentifier: default
-  active: 0
-  Properties:
-    LiveUpdate:
-      Value: 0
-      HasValue: 0
-    LiveUpdatePort:
-      Value: 0
-      HasValue: 0
-    Overlay:
-      Value: 0
-      HasValue: 0
-    Logging:
-      Value: 0
-      HasValue: 0
-    SampleRate:
-      Value: 0
-      HasValue: 0
-    BuildDirectory:
-      Value: 
-      HasValue: 0
-    SpeakerMode:
-      Value: 0
-      HasValue: 0
-    VirtualChannelCount:
-      Value: 0
-      HasValue: 0
-    RealChannelCount:
-      Value: 0
-      HasValue: 0
-    DSPBufferLength:
-      Value: 0
-      HasValue: 0
-    DSPBufferCount:
-      Value: 0
-      HasValue: 0
-    Plugins:
-      Value: []
-      HasValue: 0
-    StaticPlugins:
-      Value: []
-      HasValue: 0
-    CallbackHandler:
-      Value: {fileID: 0}
-      HasValue: 0
-  OutputTypeName: 
-  threadAffinities:
-    Value: []
-    HasValue: 0
-  displaySortOrder: 0
-  childIdentifiers: []
-  codecChannels:
-    Value: []
-    HasValue: 0
---- !u!114 &8673443426103166901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93a382382f106584e8f8f62412fee177, type: 3}
-  m_Name: FMODStudioSettingsPlatform
-  m_EditorClassIdentifier: 
-  identifier: fd7c55dab0fce234b8c25f6ffca523c1
+  identifier: b7716510a1f36934c87976f3a81dbf3d
   parentIdentifier: default
   active: 0
   Properties:
