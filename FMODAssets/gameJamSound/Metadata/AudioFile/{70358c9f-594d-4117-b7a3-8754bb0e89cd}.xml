@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{70358c9f-594d-4117-b7a3-8754bb0e89cd}">
+		<property name="assetPath">
+			<value>voice_Cat_Nyeh1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.96947845804988664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{04451a57-b297-4e7c-b587-5be00b4fea6f}</destination>
+		</relationship>
+	</object>
+</objects>

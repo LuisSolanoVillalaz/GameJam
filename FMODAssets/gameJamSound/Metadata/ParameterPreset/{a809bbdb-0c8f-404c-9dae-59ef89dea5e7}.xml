@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{a809bbdb-0c8f-404c-9dae-59ef89dea5e7}">
+		<property name="name">
+			<value>is3DFlag</value>
+		</property>
+		<relationship name="folder">
+			<destination>{77c81797-7024-44c2-a584-b0902ae3a4d8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{35f9741f-bfd9-42bc-ab00-92b48ace9e67}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{35f9741f-bfd9-42bc-ab00-92b48ace9e67}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>1.5</value>
+		</property>
+	</object>
+</objects>

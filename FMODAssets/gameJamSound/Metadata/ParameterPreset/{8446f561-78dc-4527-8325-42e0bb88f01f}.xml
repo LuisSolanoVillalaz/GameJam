@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8446f561-78dc-4527-8325-42e0bb88f01f}">
+		<property name="name">
+			<value>is3D</value>
+		</property>
+		<relationship name="folder">
+			<destination>{77c81797-7024-44c2-a584-b0902ae3a4d8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ed9253cb-55a7-4813-a146-701263e7075a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ed9253cb-55a7-4813-a146-701263e7075a}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.43999999761581421</value>
+		</property>
+	</object>
+</objects>
