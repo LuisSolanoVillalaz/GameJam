@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
-public class Move : MonoBehaviour
+public class MoveGrid : MonoBehaviour
 {   
 
     //Variables for collider calculations
