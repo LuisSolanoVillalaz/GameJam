@@ -24,7 +24,7 @@ public class Player2D : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cam = GetComponentInChildren<movCam>();
         underbox=  new UnityEngine.Vector3 (0f,-0.25f,0f);
-        width= new UnityEngine.Vector3(0.1f,0.02f,0.1f);
+        width= new UnityEngine.Vector3(0.2f,0.03f,0.2f);
     }
     private void Update()
     {
@@ -81,12 +81,16 @@ public class Player2D : MonoBehaviour
             }
             
         }
-        else if (!cam.cen ) { }
-        {
+        else if (!cam.cen ) {
 
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
                 rb.velocity = new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5,rb.velocity.y, 0 );
+                
+            }
+            if (!isfloating && Input.GetAxisRaw("Jump") != 0 && pullBox == null)
+            {
+                rb.velocity = new UnityEngine.Vector3(rb.velocity.x, 6, rb.velocity.z);
             }
         }
 
@@ -95,9 +99,7 @@ public class Player2D : MonoBehaviour
        }else if(pullBox!=null){
                     pullBox.position = rb.position+boxPos;
                 }
-        if(!isfloating && Input.GetAxisRaw("Jump")!=0 && pullBox==null){
-             rb.velocity = new UnityEngine.Vector3 ( rb.velocity.x,5, rb.velocity.z);
-        }
+       
        ///////////////////////////////////////////////////////////////////////////////
         
     }
