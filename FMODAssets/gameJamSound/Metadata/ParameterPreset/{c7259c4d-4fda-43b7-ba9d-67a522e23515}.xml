@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{c7259c4d-4fda-43b7-ba9d-67a522e23515}">
+		<property name="name">
+			<value>isScraping</value>
+		</property>
+		<relationship name="folder">
+			<destination>{77c81797-7024-44c2-a584-b0902ae3a4d8}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e4752580-af00-4e4c-97fe-7b8ea63ba180}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e4752580-af00-4e4c-97fe-7b8ea63ba180}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
