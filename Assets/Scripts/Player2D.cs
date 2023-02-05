@@ -13,7 +13,8 @@ public class Player2D : MonoBehaviour
     movCam cam;
     bool changing;
     public GameObject menu;
-
+    Rigidbody pullBox;
+    UnityEngine.Vector3 boxPos;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -51,21 +52,26 @@ public class Player2D : MonoBehaviour
         /////////////// ESTO ES MOVIMIENTO PROVISIONAL//////////////////////////////////////7
         if (cam.cen )
         {
-            if (Input.GetAxis("Horizontal") != 0|| Input.GetAxis("Vertical") != 0)
+            if (Input.GetAxisRaw("Horizontal") != 0|| Input.GetAxisRaw("Vertical") != 0)
             {
-                rb.velocity=new UnityEngine.Vector3 (-Input.GetAxis("Vertical")*5,rb.velocity.y, Input.GetAxisRaw("Horizontal") * 5);
+                rb.velocity=new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5, rb.velocity.y,(-Input.GetAxisRaw("Vertical")*5));      
             }
             
         }
         else if (!cam.cen ) { }
         {
 
-            if (Input.GetAxis("Horizontal") != 0)
+            if (Input.GetAxisRaw("Horizontal") != 0)
             {
-                rb.velocity = new UnityEngine.Vector3 (0, 0, Input.GetAxisRaw("Horizontal") * 5);
+                rb.velocity = new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5,0, 0 );
             }
         }
-       
+
+       if (Input.GetAxisRaw("Hold") == 0 && pullBox!=null){
+        pullBox=null;
+       }else if(pullBox!=null){
+                    pullBox.position = rb.position+boxPos;
+                }
        ///////////////////////////////////////////////////////////////////////////////
         
     }
@@ -75,8 +81,19 @@ public class Player2D : MonoBehaviour
         canpause = true;
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (Input.GetAxisRaw("Hold") != 0 && collision.gameObject.tag=="Box" && pullBox==null){
+            pullBox=collision.rigidbody;
+            boxPos=pullBox.position-rb.position;
+       }
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        
+
+        if (Input.GetAxisRaw("Hold") != 0 && collision.gameObject.tag=="Box" && pullBox==null){
+            pullBox=collision.rigidbody;
+            boxPos=pullBox.position-rb.position;
+       }
     }
 }

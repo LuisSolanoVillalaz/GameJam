@@ -23,21 +23,20 @@ public class movCam : MonoBehaviour
     
     public void transicion()
     {
-        Debug.DrawRay(padre.transform.position, -Vector3.right, Color.yellow);
         if (cen && canmove)
         {
             if (Physics.Raycast(padre.transform.position, -Vector3.up, out b))
             {
 
                 padre.GetComponent<Rigidbody>().useGravity = true;
-                padre.transform.position = new Vector3(padre.transform.position.x, b.transform.position.y + 1, padre.transform.position.z);
-                GameObject[] cajas = GameObject.FindGameObjectsWithTag("Caja");
+                padre.transform.position = new Vector3(padre.transform.position.x, b.point.y + (padre.transform.localScale.y / 2), padre.transform.position.z);
+                GameObject[] cajas = GameObject.FindGameObjectsWithTag("Box");
                 for (int i = 0; i < cajas.Length; i++)
                 {
                     if (Physics.Raycast(cajas[i].transform.position, -Vector3.up, out b))
                     {
                         cajas[i].GetComponent<Rigidbody>().useGravity = true;
-                        cajas[i].transform.position = new Vector3(cajas[i].transform.position.x, b.transform.position.y + 1, cajas[i].transform.position.z);
+                        cajas[i].transform.position = new Vector3(cajas[i].transform.position.x, b.point.y + (cajas[i].transform.localScale.y /2) , cajas[i].transform.position.z);
                     }
                 }
             }
@@ -53,7 +52,7 @@ public class movCam : MonoBehaviour
                     {
                       
 
-                        padre.transform.position = new Vector3(b.point.x + 1, padre.transform.position.y, padre.transform.position.z);
+                        padre.transform.position = new Vector3(b.point.x + (padre.transform.localScale.x / 2), padre.transform.position.y, padre.transform.position.z);
                         padre.GetComponent<Player2D>().tplat = false;
 
                     }
@@ -65,7 +64,7 @@ public class movCam : MonoBehaviour
                     {
 
 
-                        padre.transform.position = new Vector3(b.point.x - 1, padre.transform.position.y, padre.transform.position.z);
+                        padre.transform.position = new Vector3(b.point.x - (padre.transform.localScale.x / 2), padre.transform.position.y, padre.transform.position.z);
                         padre.GetComponent<Player2D>().tplit= false;
 
                     }
@@ -94,7 +93,7 @@ public class movCam : MonoBehaviour
                     if (assignedMaterialName.Contains(baseMaterialName)){
                         padre.GetComponent<Rigidbody>().useGravity = false;
                         padre.transform.position = padre.transform.position + new Vector3(0, 10, 0);
-                        GameObject[] cajas = GameObject.FindGameObjectsWithTag("Caja");
+                        GameObject[] cajas = GameObject.FindGameObjectsWithTag("Box");
                         for (int i = 0; i < cajas.Length; i++)
                         {
                             cajas[i].GetComponent<Rigidbody>().useGravity=false;
@@ -128,7 +127,7 @@ public class movCam : MonoBehaviour
                 if (!assignedMaterialName.Contains(baseMaterialName))
                 {
                     padre.GetComponent<Rigidbody>().useGravity = true;
-                    GameObject[] cajas = GameObject.FindGameObjectsWithTag("Caja");
+                    GameObject[] cajas = GameObject.FindGameObjectsWithTag("Box");
                     for (int i = 0; i < cajas.Length; i++)
                     {
                         if (Physics.Raycast(cajas[i].transform.position, -Vector3.up, out b))
