@@ -18,9 +18,11 @@ public class MoveGrid : MonoBehaviour
     Vector3 pd;
     //variable for conditional
 
-    public float traveldistance=8f;
+    public float traveldistance=1f;
     public float jumpforce=4f;
     float timer=0;
+    public float speed=0.2f;
+    public float movetime=0.01f;
     bool isMoving=false;
     public bool isGrounded=true;
     int count=1;
@@ -44,23 +46,23 @@ public class MoveGrid : MonoBehaviour
             Pos.x=Input.GetAxisRaw("Horizontal");
             Pos.z=Input.GetAxisRaw("Vertical");
             
-            if(timer>=0.2 && !isMoving && isGrounded && Input.GetButton("Jump")){
+            if(timer>=movetime && !isMoving && isGrounded && Input.GetButton("Jump")){
                 block.AddForce(transform.up*jumpforce, ForceMode.Impulse); 
             }
-            if(timer>=0.2 && (Pos.x!=0 ||Pos.z!=0) && !isMoving &&count==1){
+            if(timer>=movetime && (Pos.x!=0 ||Pos.z!=0) && !isMoving &&count==1){
                 direc=block.position+traveldistance*Pos;
                 MoveTo(Pos);
                 
                 timer=0;
             }
-            if(timer<=0.2){
+            if(timer<=movetime){
                 timer=timer+Time.deltaTime;
             }
             
             if(isMoving){
                 count=0;
                 float vel=block.velocity.y;
-                block.MovePosition( Vector3.MoveTowards(block.position,direc,0.2f));
+                block.MovePosition( Vector3.MoveTowards(block.position,direc,speed));
                 block.velocity=new Vector3(0,vel,0);
                 if(block.position.x==direc.x&&block.position.z==direc.z){
                     isMoving=false;

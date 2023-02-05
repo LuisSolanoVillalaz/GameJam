@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Box
+  - Caja
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Box
   - 
   - 
   - 

@@ -26,10 +26,10 @@ public class PushFree : MonoBehaviour
     void FixedUpdate(){
       
         
-        if(col.gameObject.tag=="Box"){
+        /*if(col.gameObject.tag=="Box"){
             if(transform.position.y-col.transform.position.y>0.8f && Mathf.Abs(transform.position.x-col.transform.position.x)<0.8f&&Mathf.Abs(transform.position.z-col.transform.position.z)<0.8f){
                 transform.position= new Vector3(col.transform.position.x,transform.position.y,col.transform.position.z);
             }
-        }
+        }*/
     }
 }
