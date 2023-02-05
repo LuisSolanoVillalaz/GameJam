@@ -10,8 +10,10 @@ public class Player2D : MonoBehaviour
     UnityEngine.Vector3 width;
     public bool tplat = false;
     public bool tplit = false;
-    bool canpause=true;
-    Rigidbody rb;
+
+    public bool canpause=true;
+    public Rigidbody rb;
+
     movCam cam;
     bool changing;
     public GameObject menu;
@@ -37,7 +39,15 @@ public class Player2D : MonoBehaviour
         {
             canpause = false;
             menu.GetComponent<Pause>().pausar();
-            Invoke("unpause", 1f);
+            float timeRemaining = 1;
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                canpause = true;
+            }
         }
         
     }
