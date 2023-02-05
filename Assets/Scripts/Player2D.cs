@@ -8,10 +8,14 @@ public class Player2D : MonoBehaviour
     public bool isfloating = false;
     UnityEngine.Vector3 underbox;
     UnityEngine.Vector3 width;
+    [SerializeField] float rotationSpeed = 10f;
+    [SerializeField] GameObject playerVisuals;
+    Animator anim;
     public bool tplat = false;
     public bool tplit = false;
 
     public bool canpause=true;
+
     public Rigidbody rb;
 
     movCam cam;
@@ -23,8 +27,13 @@ public class Player2D : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         cam = GetComponentInChildren<movCam>();
+
+        anim = GetComponentInChildren<Animator>();
+
         underbox=  new UnityEngine.Vector3 (0f,-0.25f,0f);
-        width= new UnityEngine.Vector3(0.2f,0.03f,0.2f);
+
+        width= new UnityEngine.Vector3(0.1f,0.02f,0.1f);
+
     }
     private void Update()
     {
@@ -56,35 +65,40 @@ public class Player2D : MonoBehaviour
         
         if(Physics.OverlapBox(rb.position+underbox, width).Length>1){
             isfloating=false;
+            anim.SetBool("Jumping", false);
             rb.velocity= UnityEngine.Vector3.zero;
         }else{
-            isfloating=true;
+            anim.SetBool("Jumping", true);
+            isfloating =true;
             
         }
         
         if(changing && cam.canmove && !isfloating )
         {
             cam.transicion();
-           
+
         }
         else
         {
-            changing= false;
+            changing = false;
         }
 
         /////////////// ESTO ES MOVIMIENTO PROVISIONAL//////////////////////////////////////7
-        if (cam.cen )
+        if (cam.cen)
         {
-            if (Input.GetAxisRaw("Horizontal") != 0|| Input.GetAxisRaw("Vertical") != 0)
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
-                rb.velocity=new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5, rb.velocity.y,(-Input.GetAxisRaw("Vertical")*5));      
+                rb.velocity = new UnityEngine.Vector3(-Input.GetAxisRaw("Horizontal") * 5, rb.velocity.y, (-Input.GetAxisRaw("Vertical") * 5));
             }
-            
+
         }
+
         else if (!cam.cen ) {
+
 
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
+
                 rb.velocity = new UnityEngine.Vector3 (-Input.GetAxisRaw("Horizontal") * 5,rb.velocity.y, 0 );
                 
             }
@@ -94,14 +108,37 @@ public class Player2D : MonoBehaviour
             }
         }
 
-       if (Input.GetAxisRaw("Hold") == 0 && pullBox!=null){
-        pullBox=null;
-       }else if(pullBox!=null){
-                    pullBox.position = rb.position+boxPos;
-                }
-       
-       ///////////////////////////////////////////////////////////////////////////////
-        
+        if (Input.GetAxisRaw("Hold") == 0 && pullBox != null) {
+            pullBox = null;
+            anim.SetBool("Push", false);
+        }
+        else if (pullBox != null) {
+
+            pullBox.position = rb.position + boxPos;
+            anim.SetBool("Push", true);
+
+        }
+        RotateToMovement();
+        anim.SetFloat("WalkBlend", rb.velocity.magnitude);
+        if (!isfloating && Input.GetAxisRaw("Jump") != 0 && pullBox == null)
+        {
+            rb.velocity = new UnityEngine.Vector3(rb.velocity.x, 5, rb.velocity.z);
+        } 
+
+    }
+    public void RotateToMovement()
+    {
+        if (rb.velocity.magnitude < 0.1f)
+        {
+            return;
+        }
+        UnityEngine.Vector3 projectedCameraForward = UnityEngine.Vector3.ProjectOnPlane(Camera.main.transform.forward, UnityEngine.Vector3.up);
+        UnityEngine.Quaternion rotationToMovement = UnityEngine.Quaternion.LookRotation(rb.velocity, UnityEngine.Vector3.up);
+        rotationToMovement.z = 0;
+        rotationToMovement.x = 0;
+        playerVisuals.transform.rotation = UnityEngine.Quaternion.RotateTowards(transform.rotation, rotationToMovement, rotationSpeed * Time.deltaTime);
+
+
     }
 
     public void unpause()
